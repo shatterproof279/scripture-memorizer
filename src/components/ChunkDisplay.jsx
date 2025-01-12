@@ -56,6 +56,21 @@ export default function ChunkDisplay() {
     }
   };
 
+  const getDisplayText = () => {
+    if (!currentChunk) return '';
+    
+    switch (state.currentRound) {
+      case 1:
+        return currentChunk;
+      case 2:
+        return createHiddenVersion(currentChunk, 0.3);
+      case 3:
+        return createHiddenVersion(currentChunk, 0.6);
+      default:
+        return currentChunk;
+    }
+  };
+
   return (
     <div className="chunk-display">
       <div className="progress-info mb-4">

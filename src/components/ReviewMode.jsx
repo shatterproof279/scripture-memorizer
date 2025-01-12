@@ -1,4 +1,4 @@
-import { useContext } from 'react';
+import { useContext, useState } from 'react';
 import { MemorizerContext } from '../contexts/MemorizerContext';
 import { validateUserInput } from '../utils/textProcessor';
 
